@@ -1,0 +1,6 @@
+.add-recipe-container{
+    display: flex;
+    justify-content:end;
+    padding: 0px 1rem;
+    margin-right: 27px;
+}

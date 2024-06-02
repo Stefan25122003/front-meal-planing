@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+body.active-modal {
+    overflow-y: hidden;
+}
+
+.AI .hidden {
+    display: none;
+}
+
+.AI .btn-modal {
+    padding: 10px 20px;
+    display: block;
+    margin: 100px auto 0;
+    font-size: 18px;
+}
+
+.AI .modal,.AI .overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: center;
+}
+
+.AI .overlay {
+    background: rgba(49,49,49,0.8);
+}
+.AI .ai-modal-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+/* .modal-content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: #f1f1f1;
+    padding: 14px 28px;
+    border-radius: 3px;
+    max-width: 600px;
+    min-width: 300px;
+} */
+.AI .modal-content {
+    width: 80%; /* Increase the width */
+    height: 80%; /* Increase the height */
+    background: white;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+    position: absolute; /* Change from relative to absolute */
+    padding: 20px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for modal's own dimensions */
+    max-width: 90%; /* Prevent modal from overflowing the viewport */
+    max-height: 90%; /* Prevent modal from overflowing the viewport */
+    overflow: auto; /* Add scroll if content is larger than modal */
+    background: #1bbc98;
+    border-radius: 10px;
+    margin-right: 5%;
+
+    display: flex; /* Use Flexbox */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center;
+}
+.AI .recipe-textarea {
+    background-color: #dddddd;
+    color: #666666;
+    padding: 1em;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    outline: none;
+    font-family: "Heebo", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.4;
+    width: 200px;
+    height: 100px;
+    transition: all 0.2s;
+  }
+  
+  .AI .recipe-textarea:hover {
+    cursor: pointer;
+    background-color: #eeeeee;
+  }
+  
+  .AI .recipe-textarea:focus {
+    cursor: text;
+    color: #333333;
+    background-color: white;
+    border-color: #333333;
+  }
+  .AI .send-button {
+    background-color: #dddddd;
+    color: #666666;
+    padding: 1em;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    outline: none;
+    font-family: "Heebo", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    /* line-height: 1.4; */
+    width: 100px;
+    height: 50px;
+    transition: all 0.2s;
+    margin-top: 60px;
+}
+
+.AI .send-button:hover {
+    cursor: pointer;
+    background-color: #eeeeee;
+}
+
+.AI .send-button:focus {
+    cursor: text;
+    color: #333333;
+    background-color: white;
+    border-color: #333333;
+}
+.AI .modal-content h2 {
+    font-size: 3em; /* Make the text bigger */
+    text-align: center; /* Center the text */
+    font-family: 'Poppins', sans-serif; 
+}
+.AI .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 7px;
+    border-radius: 0%;
+    background-image: url('./Photos/close.png'); /* Replace with your image path */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: none;
+    width: 30px; /* Adjust as needed */
+    height: 30px;
+    background-color: transparent;
+}
+.AI .modal-title-image-container {
+    width: 60%; /* Width of the container */
+    height: 300px; /* Set a specific height for the container */
+    display: block; /* Needed for margin: auto to work */
+    margin: auto; /* Center the container */
+    margin-top: 0px;
+}
+.AI .modal-title-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 17px; /* Add round corners */
+}
+.AI .text-box-container {
+    width: 100%; /* Take up the full width of the parent */
+    display: flex; /* Use Flexbox */
+    justify-content: space-between; /* Space children evenly with space on the ends */
+    margin-top: 40px;
+}
+body.modal-open {
+    overflow: hidden;
+}
+
+.AI .text-box-left {
+    width: 28%; /* Adjust as needed */
+    padding: 10px; /* Adjust as needed */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    background-color: #effaf4;
+    border-radius: 15px;
+    margin-left: 4%;
+    margin-bottom: 4%;
+}
+
+.AI .text-box-right {
+    width: 60%; /* Adjust as needed */
+    padding: 10px; /* Adjust as needed */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    background-color: #effaf4;
+    border-radius: 15px;
+    margin-right: 4%;
+    margin-bottom: 4%;
+}
+
+.AI .text-box-right h3 {
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif;
+    
+}
+.AI .text-box-left h3 {
+    text-align: center; 
+    font-size: 24px; 
+    font-family: 'Poppins', sans-serif;
+}
+.AI .modal-content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.AI .modal-content::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+ 
+.AI .modal-content::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* HTML: <div class="loader"></div> */
+/* HTML: <div class="loader"></div> */
+.AI .loader {
+    margin-top: 50px;
+    --d:22px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    color: #0b0062;
+    box-shadow: 
+      calc(1*var(--d))      calc(0*var(--d))     0 0,
+      calc(0.707*var(--d))  calc(0.707*var(--d)) 0 1px,
+      calc(0*var(--d))      calc(1*var(--d))     0 2px,
+      calc(-0.707*var(--d)) calc(0.707*var(--d)) 0 3px,
+      calc(-1*var(--d))     calc(0*var(--d))     0 4px,
+      calc(-0.707*var(--d)) calc(-0.707*var(--d))0 5px,
+      calc(0*var(--d))      calc(-1*var(--d))    0 6px;
+    animation: l27 1s infinite steps(8);
+  }
+  @keyframes l27 {
+    100% {transform: rotate(1turn)}
+  }
+/*.modal-blur {
+    filter: blur(2px);
+}*/
+/* AIModal.css */
+.AI.blur {
+    filter: blur(2px);
+}
+
+.AI.no-blur {
+    filter: none;
+}
+.AI .textarea-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.AI .recipe-textarea {
+    width: 45%; /* Adjust this value as needed */
+    margin: 0 10px; /* Add a margin to the left and right */
+    resize: none;
+}
+/* AIModal.css */
+.AI .textarea-label {
+    margin-left: 20px; /* Adjust this value as needed */
+}
+/* AIModal.css */
+.AI .additional-text {
+    margin-left: -40%; /* Adjust this value as needed */
+}
+
+/* first 2 textarea containers */
+.AI .recipe-textarea-first {
+     /* Adjust this value as needed */
+    margin: 0 3vw; /* Add a margin to the left and right */
+    margin-bottom: 20px;
+    resize: none;
+    background-color: #dddddd;
+    color: #666666;
+    padding: 1em;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    outline: none;
+    font-family: "Heebo", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.4;
+    width: 75%;
+    height: 45%;
+    transition: all 0.2s;
+
+  }
+  
+  .AI   .recipe-textarea-first:hover {
+    cursor: pointer;
+    background-color: #eeeeee;
+  }
+  
+  .AI   .recipe-textarea-first:focus {
+    cursor: text;
+    color: #333333;
+    background-color: white;
+    border-color: #333333;
+  }
+  /* second */
+  .AI  .recipe-textarea-second {
+    resize: none;
+    background-color: #dddddd;
+    color: #666666;
+    padding: 20px;
+    border-radius: 10px;
+
+    border: 2px solid transparent;
+    outline: none;
+    font-family: "Heebo", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.4;
+
+    width: 60vw;
+    max-width: 80%;
+    margin: auto;
+    height: 20vw;
+
+    transition: all 0.2s;
+    margin-left:5vw
+}
+  
+.AI  .recipe-textarea-second:hover {
+    cursor: pointer;
+    background-color: #eeeeee;
+  }
+  
+  .AI   .recipe-textarea-second:focus {
+    cursor: text;
+    color: #333333;
+    background-color: white;
+    border-color: #333333;
+  }
+
+  .AI  .error-message {
+    color: rgb(165, 24, 24);
+    font-weight: bold;
+    margin-top: 10px;
+}
+.AI .recipe-textarea-first-ingredients {
+    /* Adjust this value as needed */
+   margin: 0 3vw; /* Add a margin to the left and right */
+   margin-bottom: 20px;
+   resize: none;
+   background-color: #dddddd;
+   color: #666666;
+   padding: 1em;
+   border-radius: 10px;
+   border: 2px solid transparent;
+   outline: none;
+   font-family: "Heebo", sans-serif;
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 1.4;
+   width: 75%;
+   height: 45%;
+   transition: all 0.2s;
+
+ }
+ 
+ .AI .recipe-textarea-first-ingredients:hover {
+   cursor: pointer;
+   background-color: #eeeeee;
+ }
+ 
+ .AI .recipe-textarea-first-ingredients:focus {
+   cursor: text;
+   color: #333333;
+   background-color: white;
+   border-color: #333333;
+ }

@@ -1,0 +1,93 @@
+/* styles.css */
+
+.recipe-modal {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .modal-title {
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .recipe-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-label {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .ingredient-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .ingredients{
+    margin-top: 10px;
+  }
+  .remove-ingredient-button {
+    margin-left: 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .add-ingredient-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .form-actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .submit-button{
+    background-color: #1bbc9b;
+  }
+  .close-modal-button{
+    background-color: gray;
+  }
+  .submit-button, .close-modal-button {
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover, .close-modal-button:hover, .remove-ingredient-button:hover, .add-ingredient-button:hover {
+    opacity: 0.8;
+  }
+  .display-flex{
+    display: flex;
+    justify-content: space-between;
+  }
